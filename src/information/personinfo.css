@@ -1,0 +1,145 @@
+.person-info__awards {
+  margin-top: 10px;
+  list-style: circle;
+  padding: 5px;
+}
+
+.section__title {
+  color: var(--primary-color);
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 5px 1px 28px 1px rgba(123, 11, 11, 0.52);
+  -webkit-box-shadow: 1px 2px 15px -2px rgba(123, 11, 11, 0.52);
+  -moz-box-shadow: 6px 4px 28px -2px rgba(123, 11, 11, 0.52);
+  padding: 0;
+  width: 80%;
+  margin: 20px auto;
+  position: relative;
+}
+
+
+.switch-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 10px;
+  outline: none;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  box-shadow: 5px 1px 28px 1px rgba(123, 11, 11, 0.52);
+  -webkit-box-shadow: 0px 0px 13px -2px rgb(219, 54, 238);
+  -moz-box-shadow: 6px 4px 18px -2px rgba(123, 11, 11, 0.52);
+  bottom: -40px;
+  font-weight: 600;
+  background: var(--primary-color);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.switch-btn:hover {
+  background: #fff;
+  color: var(--primary-color);
+  box-shadow: 5px 1px 28px 1px rgba(123, 11, 11, 0.52);
+  -webkit-box-shadow: 0px 0px 13px -2px rgba(123, 11, 11, 0.52);
+  -moz-box-shadow: 6px 4px 18px -2px rgba(123, 11, 11, 0.52);
+}
+
+.next-btn {
+  right: 0;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.person img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+}
+
+
+
+.person-info {
+  padding: 7px;
+  width: 100%;
+}
+
+.person-info h1 {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.person-info p {
+  font-size: 1rem;
+  line-height: 20px;
+  margin: 20px 0;
+}
+
+.person-info__awards li {
+  letter-spacing: 1.1px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 5px 1px 28px 1px rgba(123, 11, 11, 0.52);
+  -webkit-box-shadow: 0px 0px 6px -3px rgb(219, 54, 238);
+  -moz-box-shadow: 6px 4px 18px -2px rgba(123, 11, 11, 0.52);
+}
+
+@media only screen and (max-width: 992px){
+
+  .person img{
+    width: 100%;
+    height: 350px;
+  }
+
+  .person-info h1{
+    font-size: 1.3rem;
+  }
+
+  .person-info p{
+    font-size: .9rem;
+  }
+
+  .person-info li{
+    font-size: .8rem;
+  }
+
+  .switch-btn{
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .person img{
+    width: 100%;
+    height: 550px;
+  }
+
+}
+
+@media only screen and (max-width: 575px){
+  
+  .person-info h1{
+    font-size: 1.1rem;
+  }
+  .person-info p{
+    font-size: .8rem;
+    text-align: center;
+  }
+  .person-info li{
+    font-size: .7rem;
+  }
+}

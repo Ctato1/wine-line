@@ -1,0 +1,161 @@
+.hero__section {
+  background: var(--hero-bg);
+}
+
+.hero__section {
+  box-shadow: 1px 7px 41px 0px rgba(123, 11, 11, 0.867);
+  -webkit-box-shadow: 1px 7px 41px 0px rgba(189, 3, 3, 0.604);
+  -moz-box-shadow: 1px 7px 41px 0px rgb(255, 15, 15);
+}
+
+.hero__content h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+
+.hero__content p:first-child {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero__content p {
+  color: var(--primary-color);
+  line-height: 30px;
+}
+
+.hero__section p:nth-child(1) {
+  font-weight: 600;
+}
+
+.buy__btn {
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  background: var(--primary-color);
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 30px;
+}
+
+.buy__btn a {
+  color: #fff;
+}
+
+.hero__content {
+  padding-top: 45px;
+}
+
+.hero__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__img img {
+  width: 300px;
+  object-fit: cover;
+}
+
+.dry-red__wine {
+  background: var(--card-bg);
+  margin: 1px 0;
+}
+
+.dry-white__wine {
+  background: var(--card-bg);
+  margin: 1px 0;
+}
+
+.dry-rose__wine {
+  background: var(--card-bg);
+  margin: 1px 0;
+}
+
+.dry-white__wine h2 {
+  color: rgba(52, 136, 7, 0.88);
+}
+.dry-rose__wine h2{
+  color: rgba(251, 0, 197, 0.88);
+}
+
+
+@media only screen and (max-width: 992px) {
+  .hero__content h1 {
+    font-size: 2rem;
+  }
+  .hero__content p {
+    font-size: 0.9rem;
+    font-weight: 600 !important;
+  }
+  .dry-red__wine h2 {
+    font-size: 1.5rem;
+  }
+  .dry-white__wine h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero__content {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .hero__content h1 {
+    font-size: 1.5rem;
+  }
+  .hero__content p {
+    font-size: 0.8rem;
+    font-weight: 600 !important;
+  }
+
+  .hero__img img {
+    width: 250px;
+  }
+
+  .buy__btn {
+    font-size: 0.9rem;
+  }
+
+  .dry-red__wine h2 {
+    font-size: 1.1rem;
+  }
+  .dry-white__wine h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero__content {
+    display: grid;
+    justify-content: center;
+    /* background: red; */
+  }
+
+  .hero__content p {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    line-height: 40px;
+  }
+
+  .hero__content h1 {
+    font-size: 2.1rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .hero__content {
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .hero__img img {
+    display: flex;
+    align-items: flex-end;
+    width: 200px;
+  }
+}

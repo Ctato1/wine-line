@@ -1,0 +1,54 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background: var(--primary-color);
+  box-shadow: 1px 7px 41px 0px rgba(123, 11, 11, 0.867);
+  -webkit-box-shadow: 1px 4px 40px 12px rgba(241, 4, 4, 0.58);
+  -moz-box-shadow: 1px 7px 2px 0px rgb(255, 15, 15);
+  border-top: 1px solid rgba(255, 130, 47, 0.64);
+}
+
+.footer__text {
+  color: #fff;
+  line-height: 30px;
+}
+
+.footer__quick-links ul li {
+  background: transparent !important;
+}
+
+.footer__quick-links ul li a {
+  color: #fff;
+}
+
+.quick__links-title {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.footer__contact li span,
+.footer__contact li p {
+  color: rgb(195, 193, 193);
+}
+
+.footer__contact li p {
+  font-size: 0.9rem;
+}
+
+.footer__copyright {
+  color: rgb(233, 227, 227);
+  font-size: 0.9rem;
+}
+
+.footer__copyright-span {
+  position: relative;
+  font-size: 1rem;
+  top: -6px;
+}
+
+@media only screen and (max-width: 241px) {
+  .footer__contact .main-gmail {
+    font-size: 0.8rem;
+  }
+}

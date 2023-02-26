@@ -1,0 +1,40 @@
+.login__section{
+    display: flex;
+    align-items: center;
+}
+
+.auth__form{
+    background: var(--primary-color);
+    padding: 40px;
+    border-radius: 5px;
+}
+
+.form__group input{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #c1c1c1;
+    outline: none;
+}
+
+.auth__form .auth__btn{
+    margin: 20px 0;
+    background: #fff;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.auth__form p{
+    margin-top: 20px;
+}
+.auth__form p a{
+    color: #fff;
+}
+
+.auth__form input[type='file']{
+    background: #fff;
+    cursor: pointer;
+    width: 50%;
+}

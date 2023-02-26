@@ -1,0 +1,131 @@
+.product-image {
+  width: 350px;
+  height: 500px;
+  margin-top: 50px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto; */
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+/* .products__details {
+  margin-top: 70px;
+} */
+
+.products__details-price {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.products__details h2 {
+  font-size: 1.6rem;
+}
+
+.products__details p {
+  margin: 4px 0;
+}
+
+.products__details p:nth-child(3) {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.products__details img {
+  margin-right: 5px;
+  width: 20px;
+}
+
+.buy__btn {
+  color: #fff;
+}
+
+.tab__wrapper h6 {
+  cursor: pointer;
+}
+
+.active__tab {
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: 0.3s;
+  transform: scale(1.1);
+  /* border-bottom: 1px solid var(--primary-color); */
+}
+
+/*  */
+
+.tab__wrapper h6 {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  line-height: 1rem;
+  transition: .2s;
+}
+.tab__wrapper h6:after {
+  display: block;
+  content: "";
+  padding-top: 2px;
+  border-bottom: solid 2px var(--primary-color);
+  transform: scaleX(.02);
+  transition: transform .2s;
+}
+
+
+.tab__wrapper h6:hover:after {
+  transition-delay: .1s;
+}
+
+.tab__wrapper h6:hover:after,
+.tab__wrapper h6:hover:before {
+  transform: scaleX(1);
+}
+
+/*  */
+
+.tab__content p {
+  line-height: 30px;
+}
+
+.det__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.det__content .det__content-second {
+  text-align: right;
+}
+
+.related__title{
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width:992px){
+  .product-image{
+    display: flex;
+    align-items: center;
+  }
+  .product-image img{
+    width: 90%;
+    height: 90%;
+  }
+
+  .products__details h2 {
+    font-size: 1.3rem;
+  }
+}
