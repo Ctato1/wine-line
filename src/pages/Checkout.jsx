@@ -35,41 +35,55 @@ const Checkout = () => {
 
   const userDataSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    const year = new Date().getFullYear();
-    const month = new Date().getMonth();
-    const day = new Date().getDay();
-    const minutes = new Date().getMinutes();
-    const seconds = new Date().getSeconds();
-    const getDate = `${month}-${day}-${minutes}-${seconds}`;
-    const cod = Date.now();
 
-    try {
-      await setDoc(doc(db, "checkout", getDate + username), {
-        uid: username + cod,
-        buyer: username,
-        email: email,
-        phone: phone,
-        address: address,
-        city: city,
-        postal: postal,
-        products: `${
-          cartItems.map((item) => item.productName + "-" + item.quantity) + ","
-        }`,
-        totalAmount,
-        date: `
+    if (
+      username === "" ||
+      email === "" ||
+      phone === "" ||
+      address === "" ||
+      city === "" ||
+      postal === ""
+    ) {
+      toast.error("Fill information");
+      return;
+    } else {
+      setLoading(true);
+      const year = new Date().getFullYear();
+      const month = new Date().getMonth();
+      const day = new Date().getDay();
+      const minutes = new Date().getMinutes();
+      const seconds = new Date().getSeconds();
+      const getDate = `${month}-${day}-${minutes}-${seconds}`;
+      const cod = Date.now();
+
+      try {
+        await setDoc(doc(db, "checkout", getDate + username), {
+          uid: username + cod,
+          buyer: username,
+          email: email,
+          phone: phone,
+          address: address,
+          city: city,
+          postal: postal,
+          products: `${
+            cartItems.map((item) => item.productName + "-" + item.quantity) +
+            ","
+          }`,
+          totalAmount,
+          date: `
         year:${year} \n
         month: ${month} \n
         day: ${day} \n
         minutes: ${minutes} \n
         seconds: ${seconds}`,
-      });
-      setLoading(false);
-      toast.success("The message has been sent successfully");
-      navigate("/");
-    } catch (error) {
-      setLoading(false);
-      toast.error(error.message);
+        });
+        setLoading(false);
+        toast.success("The message has been sent successfully");
+        navigate("/");
+      } catch (error) {
+        setLoading(false);
+        toast.error(error.message);
+      }
     }
   };
 
@@ -96,6 +110,7 @@ const Checkout = () => {
                         type="text"
                         placeholder="Enter your name"
                         name="name"
+                        required
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                       />
@@ -106,6 +121,7 @@ const Checkout = () => {
                         type="email"
                         placeholder="Enter your email"
                         name="email"
+                        required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                       />
@@ -116,6 +132,7 @@ const Checkout = () => {
                         type="number"
                         placeholder="Phone number"
                         name="phone"
+                        required
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                       />
@@ -126,6 +143,7 @@ const Checkout = () => {
                         type="text"
                         placeholder="Street address"
                         name="address"
+                        required
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
                       />
@@ -136,6 +154,7 @@ const Checkout = () => {
                         type="text"
                         placeholder="City"
                         name="city"
+                        required
                         value={city}
                         onChange={(e) => setCity(e.target.value)}
                       />
