@@ -85,7 +85,7 @@ const Header = () => {
       <Container>
         <Row>
           <div className="nav__wrapper">
-            <div className="logo">
+            <div className="logo" onClick={()=> navigate('/home')}>
               <img src={logo} alt="logo" />
             </div>
             <div className="navigation" ref={menuRef} onClick={menuToggle}>

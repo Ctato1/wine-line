@@ -1,6 +1,8 @@
+.logo {
+  cursor: pointer;
+}
 .logo img {
   width: 100px;
-  /* height: 50px; */
   object-fit: contain;
   border-radius: 50%;
   border: 1px solid green;
@@ -83,19 +85,19 @@
   font-size: 0.7rem;
 }
 
-.profile img{
+.profile img {
   border-radius: 50px;
   height: 30px;
   width: 30px;
   object-fit: cover;
 }
 
-.nav_icons .profile{
+.nav_icons .profile {
   position: relative;
   z-index: 1;
 }
 
-.nav_icons .profile .profile__actions{
+.nav_icons .profile .profile__actions {
   position: absolute;
   top: 100%;
   right: -80%;
@@ -112,7 +114,7 @@
   border-radius: 10px;
 }
 
-.nav_icons .profile .show__profileActions{
+.nav_icons .profile .show__profileActions {
   display: block;
 }
 
@@ -178,8 +180,6 @@
     display: block;
   }
 
-  
-
   .mobile__menu {
     font-size: 1.5rem;
     color: #fff;
@@ -188,13 +188,9 @@
     margin-left: 20px;
   }
 
-  .profile img{
+  .profile img {
     margin-bottom: 2px;
   }
-
-
-
-
 
   .navigation ul li a {
     color: black;
@@ -202,29 +198,28 @@
     font-weight: bold;
   }
 
-   .logo img{
+  .logo img {
     width: 85px;
   }
 
-  .cart__icon span{
+  .cart__icon span {
     margin-top: 10px;
   }
 
-  .header{
+  .header {
     width: 100%;
     height: 60px;
     line-height: 60px;
-  } 
-
+  }
 }
-@media only screen and (max-width: 575px){
-  .nav__wrapper{
+@media only screen and (max-width: 575px) {
+  .nav__wrapper {
     padding: 0 30px;
   }
 }
 
-@media only screen and (max-width: 2335px){
-  .nav__wrapper{
+@media only screen and (max-width: 2335px) {
+  .nav__wrapper {
     padding: 0px;
   }
 }
