@@ -57,6 +57,12 @@ const Header = () => {
       }
     });
   };
+  
+  useEffect(() => {
+    stickyHeaderFunc();
+
+    return () => window.removeEventListener("scroll", stickyHeaderFunc);
+  }, []);
 
   const logout = () => {
     signOut(auth)
@@ -69,12 +75,6 @@ const Header = () => {
       });
   };
 
-  useEffect(() => {
-    stickyHeaderFunc();
-
-    return () => window.removeEventListener("scroll", stickyHeaderFunc);
-  }, []);
-
   const menuToggle = () => menuRef.current.classList.toggle("active__menu");
 
   const toggleProfileActions = () =>
@@ -85,7 +85,7 @@ const Header = () => {
       <Container>
         <Row>
           <div className="nav__wrapper">
-            <div className="logo" onClick={()=> navigate('/home')}>
+            <div className="logo" onClick={() => navigate("/home")}>
               <img src={logo} alt="logo" />
             </div>
             <div className="navigation" ref={menuRef} onClick={menuToggle}>
@@ -130,7 +130,9 @@ const Header = () => {
                   onClick={toggleProfileActions}
                 >
                   {currentUser ? (
-                    <span onClick={logout} className='w-100'>Logout</span>
+                    <span onClick={logout} className="w-100">
+                      Logout
+                    </span>
                   ) : (
                     <div className="d-flex align-items-center justify-content-center flex-column">
                       <Link to="/login">Login</Link>
